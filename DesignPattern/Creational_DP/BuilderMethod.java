@@ -197,3 +197,15 @@ public class BuilderMethod {
 //}
 //
 // 
+/*
+
+Computer is the product being built.
+ComputerBuilder is the builder interface.
+DesktopBuilder is a concrete builder implementing the ComputerBuilder interface.
+ComputerDirector is the director class responsible for orchestrating the construction process.
+The main method in BuilderPatternExample demonstrates how a client can use the builder pattern to construct a complex object (Computer) step by step.
+
+This design pattern is useful when an object needs to be constructed with numerous possible configurations or when the construction process is complex and
+ needs to be separated from the representation of the object
+
+*/
