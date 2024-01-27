@@ -102,3 +102,12 @@ public class Prototype {
         assaultPlayer.displayLoadout(); // Output: Assault Loadout: AKM Assault Rifle
     }
 }
+/* The PlayerPrototype interface defines the clone(), equipWeapon(), and displayLoadout() methods.
+The Sniper and Assault classes are concrete prototypes implementing the PlayerPrototype interface.
+The PlayerManager manages player prototypes and provides a method to create cloned players.
+The main method demonstrates creating, registering, and cloning player prototypes with an emphasis on weapon loadouts.
+
+This example allows players to have different initial loadouts and customize their weapons. The Prototype pattern helps in creating
+ new player instances by copying existing ones, making it easy to customize individual attributes while reusing the common structure.
+
+*/
