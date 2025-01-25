@@ -1,0 +1,33 @@
+Interface Segregation Principle (ISP)
+Definition:
+A class should not be forced to implement interfaces it does not use.
+
+Explanation:
+Large interfaces for cricket players should be split into smaller, role-specific ones.
+
+Example (Bad):
+
+interface Cricketer {
+    void bat();
+    void bowl();
+    void keepWickets();
+}
+
+class Batsman implements Cricketer {
+    @Override
+    public void bat() {
+        System.out.println("Batting...");
+    }
+
+    @Override
+    public void bowl() {
+        throw new UnsupportedOperationException("Batsman does not bowl.");
+    }
+
+    @Override
+    public void keepWickets() {
+        throw new UnsupportedOperationException("Batsman does not keep wickets.");
+    }
+}
+
+Here, the Batsman is forced to implement unnecessary methods.
