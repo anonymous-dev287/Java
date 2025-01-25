@@ -1,0 +1,35 @@
+Dependency Inversion Principle (DIP)
+Definition:
+High-level modules should not depend on low-level modules. Both should depend on abstractions.
+
+Explanation:
+Depend on abstractions (interfaces) rather than concrete implementations.
+
+Example (Bad):
+
+class CricketBat {
+}
+
+class Cricketer {
+    private CricketBat bat;
+
+    public Cricketer() {
+        this.bat = new CricketBat();
+    }
+
+    public void play() {
+        System.out.println("Playing with the bat.");
+    }
+}
+
+The Cricketer class directly depends on the CricketBat implementation.
+
+
+
+
+Principle |	Cricket Example
+SRP	      |  Separate classes for team selection and match scheduling.
+OCP	      |  Add new player roles without modifying existing code.
+LSP	      |  A batsman or bowler can replace a generic cricketer without issues.
+ISP	      |  Separate interfaces for batting, bowling, and wicket-keeping.
+DIP	      |  Depend on Equipment (bat/ball abstraction), not concrete implementations.

@@ -1,0 +1,22 @@
+Open/Closed Principle (OCP)
+
+Definition:
+A class should be open for extension but closed for modification.
+
+Explanation:
+You should be able to add new cricket player roles without modifying the existing code.
+
+Example (Bad):
+
+class Player {
+    public void play(String role) {
+        if (role.equals("Batsman")) {
+            System.out.println("Playing as Batsman");
+        } else if (role.equals("Bowler")) {
+            System.out.println("Playing as Bowler");
+        }
+    }
+}
+Adding a new role (e.g., WicketKeeper) would require modifying the play method.
+
+For Good practice see the other java implemented classes under ocp folder

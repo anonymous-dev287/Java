@@ -1,0 +1,25 @@
+Liskov Substitution Principle (LSP)
+Definition:
+Objects of a superclass should be replaceable with objects of a subclass without breaking the program.
+
+Explanation:
+A cricket subclass should behave as expected if used as its superclass.
+
+Example (Bad):
+
+class Cricketer {
+    public void bat() {
+        System.out.println("Batting...");
+    }
+}
+
+class Bowler extends Cricketer {
+    @Override
+    public void bat() {
+        throw new UnsupportedOperationException("Bowler does not bat.");
+    }
+}
+
+Here, a Bowler violates LSP because it doesn't support bat() properly, which is expected behavior for a Cricketer
+
+For Good practice see the other java implemented classes under lsp folder
